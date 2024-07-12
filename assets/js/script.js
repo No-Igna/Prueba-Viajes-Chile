@@ -1,3 +1,6 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 $(window).scroll(function(){
     if($("#navbarfijo").offset().top > 350){
         $("#navbarfijo").removeClass("bg-transparent");
